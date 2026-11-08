@@ -1,0 +1,178 @@
+/* demo-site-19 こうやま整体院 — style-v3.css (2026-11-08 全面刷新)
+   コンセプト: 院長ひとりの手帖型。狭幅1カラム、中央見出し、茶 #6B4226 × 苔 #40513B、紙の余白。
+   フォントは Noto Sans JP 500/700/900 のみ。角丸0。英字ラベルなし。 */
+:root{
+  --bg:#FBF8F0; --paper:#FFFFFF; --ink:#2B241C; --muted:#5C5347;
+  --main:#6B4226; --sub:#40513B; --cta:#A63D1F; --cta-d:#86300F;
+  --line:#6B4226; --line-soft:#D8CDBB; --panel:#F3EDDD; --panel2:#ECEFE6;
+  --s1:8px;--s2:16px;--s3:24px;--s4:32px;--s5:40px;--s6:48px;--s8:64px;--s12:96px;
+  --container:880px;
+}
+*,*::before,*::after{box-sizing:border-box;border-radius:0}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:16px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",sans-serif;font-weight:500;font-size:16px;line-height:2;padding-bottom:72px}
+h1,h2,h3,h4,p,ul,ol,dl,dd,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+img{display:block;max-width:100%;height:auto}
+b,strong,th{font-weight:700}
+a{color:var(--main);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid #0B57D0;outline-offset:3px}
+.container{width:min(var(--container),calc(100% - 40px));margin-inline:auto}
+.num{font-variant-numeric:tabular-nums;font-weight:900}
+.note{font-size:14px;line-height:1.9;color:var(--muted)}
+.lead{text-align:center;margin-bottom:var(--s4)}
+
+.demo-banner{background:#2B241C;color:#fff;font-size:13px;font-weight:700;line-height:1.6;padding:var(--s1) 0;text-align:center}
+
+/* ヘッダー: 中央ロゴの静かな構成 */
+.site-header{background:var(--bg);border-bottom:1px solid var(--line-soft)}
+.header-inner{display:flex;flex-direction:column;align-items:center;gap:var(--s1);padding:var(--s3) 0 var(--s2);text-align:center}
+.logo{font-weight:900;font-size:28px;line-height:1.3;color:var(--main);text-decoration:none}
+.header-tel{display:inline-flex;align-items:center;min-height:44px;font-weight:900;font-size:19px;color:var(--sub);text-decoration:none;font-variant-numeric:tabular-nums}
+.site-nav{width:100%}
+.site-nav ul{display:flex;flex-wrap:wrap;justify-content:center;gap:0 var(--s3)}
+.site-nav a{display:inline-flex;align-items:center;min-height:44px;font-weight:700;font-size:14px;color:var(--ink);text-decoration:none}
+.site-nav a:hover{text-decoration:underline;text-underline-offset:4px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 var(--s4);font-weight:900;font-size:17px;text-decoration:none;border:2px solid transparent;line-height:1.35;text-align:center}
+.btn-cta{background:var(--cta);color:#fff;border-color:var(--cta);font-variant-numeric:tabular-nums;white-space:nowrap}
+.btn-cta:hover{background:var(--cta-d);border-color:var(--cta-d)}
+.btn-line{background:transparent;color:var(--main);border-color:var(--main);font-weight:700}
+.btn-line:hover{background:var(--panel)}
+
+/* ヒーロー: 文章を中央に置き、写真は下に大きく1枚 */
+.hero{padding:var(--s8) 20px 0;text-align:center}
+.hero-grid{display:block;max-width:880px;margin-inline:auto}
+.hero-body{padding:0 var(--s2)}
+.hero-name{font-weight:700;font-size:15px;color:var(--sub);letter-spacing:.08em}
+.hero h1{font-weight:900;font-size:36px;line-height:1.5;margin-top:var(--s2);color:var(--main)}
+.hero-lead{margin:var(--s3) auto 0;max-width:36em;text-align:left}
+.hero-tag{display:inline-block;margin-top:var(--s3);border:2px solid var(--sub);color:var(--sub);font-weight:900;padding:var(--s1) var(--s2);line-height:1.5;font-size:15px}
+.hero-cta{margin-top:var(--s4);display:flex;flex-direction:column;gap:var(--s1);align-items:center}
+.hero-cta small{font-size:13px;color:var(--muted)}
+.hero-photo{margin-top:var(--s5)}
+.hero-photo img{width:100%;aspect-ratio:16/8;object-fit:cover}
+
+/* 信頼帯: 罫線だけの静かな4項目 */
+.trust{border-bottom:1px solid var(--line-soft)}
+.trust .container{padding-top:var(--s3);padding-bottom:var(--s2)}
+.trust-list{display:grid;grid-template-columns:1fr 1fr}
+.trust-item{padding:var(--s2);text-align:center}
+.trust-item dt{font-size:13px;font-weight:700;color:var(--muted)}
+.trust-item dd{font-weight:900;font-size:26px;line-height:1.4;color:var(--sub);font-variant-numeric:tabular-nums;white-space:nowrap}
+.trust-item dd small{font-size:14px;font-weight:700}
+.trust-note{font-size:12px;line-height:1.8;color:var(--muted);text-align:center;padding-top:var(--s1)}
+
+/* セクション: 中央見出し+短い罫 */
+.section{padding:var(--s8) 0}
+.section.alt{background:var(--panel2)}
+.section h2{font-weight:900;font-size:26px;line-height:1.45;color:var(--main);text-align:center;margin-bottom:var(--s5)}
+.section h2::after{content:"";display:block;width:56px;height:4px;background:var(--cta);margin:var(--s2) auto 0}
+.section h3{font-weight:700;font-size:19px;line-height:1.55}
+
+/* お悩み: 1カラムの行リスト */
+.check-list{border-top:1px solid var(--line-soft);max-width:640px;margin-inline:auto}
+.check-list li{display:grid;grid-template-columns:36px 1fr;align-items:center;min-height:56px;border-bottom:1px solid var(--line-soft);font-weight:700;padding:var(--s1) 0}
+.check-list li::before{content:"";width:14px;height:14px;background:var(--sub);justify-self:center}
+#worry .note{text-align:center}
+
+/* 当院について */
+.about-grid{display:grid;grid-template-columns:1fr;gap:var(--s4)}
+.about-grid p{max-width:40em;margin-inline:auto}
+.about-grid img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.features{margin-top:var(--s6);border-top:1px solid var(--line-soft)}
+.features li{padding:var(--s3) 0;border-bottom:1px solid var(--line-soft);display:grid;grid-template-columns:64px 1fr;gap:var(--s1) var(--s2)}
+.features .num{color:var(--cta);font-size:30px;line-height:1.3}
+.features p{font-size:15px;line-height:1.9;grid-column:2;color:var(--muted)}
+.director{margin-top:var(--s8);background:var(--paper);border:1px solid var(--line-soft);padding:var(--s4);display:grid;grid-template-columns:1fr;gap:var(--s3)}
+.director img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.director h3{font-size:22px;font-weight:900;color:var(--main);margin-bottom:var(--s1)}
+.steps-title{margin-top:var(--s8);text-align:center;font-size:21px}
+.steps-title::after{content:"";display:block;width:56px;height:4px;background:var(--cta);margin:var(--s2) auto 0}
+/* 施術の流れ: 背骨のように縦に貫くライン */
+.steps{max-width:640px;margin:var(--s4) auto 0;border-left:3px solid var(--sub);padding-left:var(--s4);display:grid;gap:var(--s3);counter-reset:step}
+.steps li{position:relative;font-weight:700;line-height:1.7;padding-top:2px}
+.steps li::before{counter-increment:step;content:counter(step);position:absolute;left:calc(-1 * var(--s4) - 19px);top:0;width:36px;height:36px;background:var(--sub);color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center;font-variant-numeric:tabular-nums}
+
+/* メニュー: 写真つき横行+料金表 */
+.menu-cards{display:grid;grid-template-columns:1fr;gap:var(--s3)}
+.menu-card{background:var(--paper);border:1px solid var(--line-soft);display:grid;grid-template-columns:1fr}
+.menu-card img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.menu-card-body{padding:var(--s3) var(--s3) 0}
+.menu-card-body p{font-size:15px;line-height:1.9;color:var(--muted);margin-top:var(--s1)}
+.price-row{display:grid;grid-template-columns:1fr auto;align-items:baseline;gap:var(--s2);margin:var(--s2) var(--s3) 0;padding:var(--s1) 0 var(--s3);border-top:1px solid var(--line-soft)}
+.price-row .label{font-size:14px;font-weight:700;color:var(--muted)}
+.price{text-align:right;font-weight:900;font-size:27px;line-height:1.3;font-variant-numeric:tabular-nums;color:var(--main);white-space:nowrap}
+.table-title{margin-top:var(--s6);margin-bottom:var(--s2);text-align:center;font-size:20px}
+.table{width:100%;border-collapse:collapse;border-top:2px solid var(--main);background:var(--paper)}
+.table th,.table td{padding:var(--s2);border-bottom:1px solid var(--line-soft);text-align:left;vertical-align:baseline;line-height:1.75}
+.table th{width:52%;font-weight:700}
+.table td.price-cell{text-align:right;font-weight:900;font-size:20px;font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--main)}
+.table td.price-cell .plus{font-size:14px;font-weight:700}
+.price-notes{margin-top:var(--s3);display:grid;gap:var(--s1);max-width:640px;margin-inline:auto}
+.price-notes li{padding-left:var(--s2);border-left:4px solid var(--cta);font-size:15px;line-height:1.85}
+.cta-row{margin-top:var(--s5);display:flex;justify-content:center}
+.hours-table th{width:32%;background:var(--panel);text-align:center}
+.hours-table td{text-align:center;font-weight:700}
+.hours-table .num{font-size:19px}
+#hours .note{text-align:center}
+
+/* アクセス */
+.access-grid{display:grid;grid-template-columns:1fr;gap:var(--s4)}
+.access-table th{width:26%;background:var(--panel)}
+.map iframe{width:100%;height:340px;border:1px solid var(--line-soft);display:block}
+.map-links{margin-top:var(--s3);display:flex;flex-direction:column;gap:var(--s2);align-items:stretch}
+.access-photo img{width:100%}
+.access-photo figcaption{font-size:13px;color:var(--muted);margin-top:var(--s1)}
+
+/* FAQ */
+.faq{border-top:1px solid var(--line-soft)}
+.faq-item{border-bottom:1px solid var(--line-soft)}
+.faq-item h3{font-size:16px}
+.faq-q{width:100%;display:grid;grid-template-columns:1fr 24px;gap:var(--s2);align-items:center;text-align:left;min-height:60px;padding:var(--s2) 0;background:none;border:0;font:inherit;font-weight:700;color:var(--ink);cursor:pointer;line-height:1.6}
+.faq-q::after{content:"+";font-weight:900;font-size:22px;color:var(--cta);text-align:center}
+.faq-q[aria-expanded="true"]::after{content:"−"}
+.faq-a{padding:0 0 var(--s3);font-size:15px;line-height:1.95}
+.faq-a[hidden]{display:none}
+
+/* 予約: 苔色の静かな帯 */
+.reserve{background:var(--sub);color:#fff;text-align:center}
+.reserve h2{color:#fff}
+.reserve h2::after{background:#fff}
+.reserve a:not(.btn){color:#fff}
+.reserve-tel{font-weight:900;font-size:44px;line-height:1.3;font-variant-numeric:tabular-nums;margin:var(--s2) 0}
+.reserve-tel a{color:#fff;text-decoration:none}
+.reserve-badge{display:inline-block;background:#fff;color:var(--sub);font-weight:900;padding:var(--s1) var(--s2)}
+.reserve-actions{display:flex;flex-direction:column;gap:var(--s2);align-items:center;margin-top:var(--s4)}
+.reserve .btn-line{color:#fff;border-color:#fff}
+.reserve .btn-line:hover{background:rgba(255,255,255,.12)}
+
+.demo-note{padding:var(--s4) 0;font-size:13px;line-height:1.9;color:var(--muted)}
+.demo-note h2{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:var(--s1);text-align:left}
+.demo-note h2::after{display:none}
+.site-footer{background:#241B12;color:#fff;padding:var(--s6) 0;font-size:15px;line-height:1.95;text-align:center}
+.site-footer .f-name{font-weight:900;font-size:21px}
+.site-footer a{color:#fff}
+.site-footer address{font-style:normal}
+.site-footer .copy{margin-top:var(--s3);font-size:13px}
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:10;background:var(--cta);color:#fff;display:flex;align-items:center;justify-content:center;min-height:58px;font-weight:900;font-size:17px;text-decoration:none;font-variant-numeric:tabular-nums;padding:0 var(--s2)}
+
+@media (min-width:768px){
+  .hero h1{font-size:44px}
+  .trust-list{grid-template-columns:repeat(4,1fr)}
+  .menu-card{grid-template-columns:280px 1fr auto;align-items:stretch}
+  .menu-card img{aspect-ratio:auto;height:100%}
+  .price-row{border-top:0;margin:0;padding:var(--s3) var(--s3) var(--s3) 0;align-content:center;grid-template-columns:1fr}
+  .price-row .label{text-align:right}
+  .director{grid-template-columns:2fr 3fr;align-items:center}
+  .map-links{flex-direction:row}
+  .map-links .btn{flex:1}
+  .reserve-actions{flex-direction:row;justify-content:center}
+  .reserve-tel{font-size:58px}
+}
+@media (min-width:1024px){
+  body{padding-bottom:0}
+  .section{padding:var(--s12) 0}
+  .section h2{font-size:30px}
+  .sticky-cta{display:none}
+}
